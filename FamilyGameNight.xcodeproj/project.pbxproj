@@ -43,6 +43,9 @@
 		58F2C8542B8903E8009C38C5 /* GoogleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F2C8532B8903E8009C38C5 /* GoogleSignInManager.swift */; };
 		58F2C8552B8903E8009C38C5 /* GoogleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F2C8532B8903E8009C38C5 /* GoogleSignInManager.swift */; };
 		58F2C8562B8903E8009C38C5 /* GoogleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F2C8532B8903E8009C38C5 /* GoogleSignInManager.swift */; };
+		58F2C8592B8915F8009C38C5 /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F2C8582B8915F8009C38C5 /* View+extension.swift */; };
+		58F2C85A2B8915F8009C38C5 /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F2C8582B8915F8009C38C5 /* View+extension.swift */; };
+		58F2C85B2B8915F8009C38C5 /* View+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F2C8582B8915F8009C38C5 /* View+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +84,7 @@
 		58F2C84D2B88FF29009C38C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		58F2C8512B88FFC6009C38C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		58F2C8532B8903E8009C38C5 /* GoogleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInManager.swift; sourceTree = "<group>"; };
+		58F2C8582B8915F8009C38C5 /* View+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +160,7 @@
 		58B07B662B853C820095BB1F /* FamilyGameNight */ = {
 			isa = PBXGroup;
 			children = (
+				58F2C8572B8915D9009C38C5 /* Extensions */,
 				58F2C8522B8903D1009C38C5 /* Models */,
 				58F2C8512B88FFC6009C38C5 /* Info.plist */,
 				58BB89B62B882065009BDF6A /* AuthLogin */,
@@ -226,6 +231,14 @@
 				58F2C8532B8903E8009C38C5 /* GoogleSignInManager.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		58F2C8572B8915D9009C38C5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				58F2C8582B8915F8009C38C5 /* View+extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,6 +403,7 @@
 				58F2C8542B8903E8009C38C5 /* GoogleSignInManager.swift in Sources */,
 				58BB89932B87F281009BDF6A /* HomeView.swift in Sources */,
 				5821DF5B2B8658000032BEBE /* LoginiViewModel.swift in Sources */,
+				58F2C8592B8915F8009C38C5 /* View+extension.swift in Sources */,
 				58B07B682B853C820095BB1F /* FamilyGameNightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,6 +414,7 @@
 			files = (
 				58B07B792B853C860095BB1F /* FamilyGameNightTests.swift in Sources */,
 				58BB89B92B882092009BDF6A /* AuthManager.swift in Sources */,
+				58F2C85A2B8915F8009C38C5 /* View+extension.swift in Sources */,
 				58F2C8552B8903E8009C38C5 /* GoogleSignInManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +423,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58F2C85B2B8915F8009C38C5 /* View+extension.swift in Sources */,
 				58F2C8562B8903E8009C38C5 /* GoogleSignInManager.swift in Sources */,
 				58B07B832B853C860095BB1F /* FamilyGameNightUITests.swift in Sources */,
 				58BB89BA2B882092009BDF6A /* AuthManager.swift in Sources */,
