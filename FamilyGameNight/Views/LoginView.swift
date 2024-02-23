@@ -27,10 +27,11 @@ struct LoginView: View {
                     .cornerRadius(40)
             }
             HStack{
-                Button { signInAnonymously() } label: {
-                    Text("Skip")
+                if authManager.authState == .signedOut {
+                    Button { signInAnonymously() } label: {
+                        Text("Skip")
+                    }
                 }
-
                 Spacer()
                 Text("Forgot Password")
                     .fontWeight(.thin)
@@ -46,7 +47,7 @@ struct LoginView: View {
     func signInAnonymously() {
         Task {
             do {
-                let rresult = try await authManager.signInAnonymously()
+                let result = try await authManager.signInAnonymously()
             }
             catch {
                 // TODO: EH2 - handle frront end error for failed anonymous sign in
@@ -58,4 +59,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
+        .environmentObject(AuthManager())
 }

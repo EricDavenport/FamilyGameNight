@@ -54,4 +54,18 @@ class AuthManager: ObservableObject {
             throw error
         }
     }
+    
+    func signOut() async throws {
+        if let user = Auth.auth().currentUser {
+            do {
+                // TODO: Sign out frrom the signed-in provider
+                try Auth.auth().signOut()
+            }
+            catch let error as NSError {
+                 // TODO: EH3 - failed to signout from provider
+                print("FireebaseAuthError: Failed to sign out from Firebase, \(error)")
+                throw error
+            }
+        }
+    }
 }
