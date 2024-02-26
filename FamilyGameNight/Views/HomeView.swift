@@ -28,7 +28,7 @@ struct HomeView: View {
                     Text(authManager.authState != .signedIn ? "Sign-out" : "Sign-in")
                 }
             }
-            .sheet(isPresented: $showLoginSheet) {
+            .fullScreenCover(isPresented: $showLoginSheet) {
                 LoginView()
             }
         }

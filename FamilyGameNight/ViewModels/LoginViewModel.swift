@@ -1,6 +1,6 @@
 import Foundation
 
-class LoginiViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
     
     @Published var username: String = ""
     @Published var password: String = ""

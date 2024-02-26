@@ -31,8 +31,10 @@ struct FamilyGameNightApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                // pass the authManager to the environmentObject
-                .environmentObject(authManager)
+                .environmentObject(authManager)   // pass the authManager to the environmentObject
+                .onOpenURL { url in
+                    GIDSignIn.sharedInstance.handle(url)
+                }
         }
     }
 }

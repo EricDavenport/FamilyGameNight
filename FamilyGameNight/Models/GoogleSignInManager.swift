@@ -1,15 +1,27 @@
 import Foundation
 import GoogleSignIn
+import Firebase
 
 class GoogleSignInManager {
     
     static let shared = GoogleSignInManager()
+    
+
+    
+    
     
     typealias GoogleAuthResult = (GIDGoogleUser?, Error?) -> Void
     
     private init() {}
     
     func signInWithGoogle(_ completion: @escaping GoogleAuthResult) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else {
+            return
+        }
+        
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+        
         // is user already signed in
         if GIDSignIn.sharedInstance.hasPreviousSignIn() {
             GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
